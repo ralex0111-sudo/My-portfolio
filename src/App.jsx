@@ -1,8 +1,8 @@
 export default function App() {
   return (
-    <div>
+    <div style={{ padding: "40px", color: "black" }}>
       <h1>My Portfolio</h1>
-      <p>Welcome to my portfolio!</p>
+      <p>React is working!</p>
     </div>
   );
 }
