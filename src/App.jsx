@@ -1,8 +1,18 @@
 export default function App() {
   return (
-    <div style={{ padding: "40px", color: "black" }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        padding: "40px",
+        backgroundColor: "#f5f7fa",
+        color: "#222",
+        fontFamily: "Arial, sans-serif",
+        boxSizing: "border-box",
+      }}
+    >
       <h1>My Portfolio</h1>
-      <p>React is working!</p>
+      <p>Welcome to my portfolio!</p>
+      <p>React is working successfully.</p>
     </div>
   );
 }
