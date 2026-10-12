@@ -5,7 +5,7 @@ export default function App() {
         minHeight: "100vh",
         padding: "40px",
         backgroundColor: "#f5f7fa",
-        color: "#222",
+        color: "white",
         fontFamily: "Arial, sans-serif",
         boxSizing: "border-box",
       }}
