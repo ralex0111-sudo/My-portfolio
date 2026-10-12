@@ -1,18 +1,63 @@
-export default function App() {
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+
+import {
+  Services,
+  WebService,
+  UIService,
+  MarketingService,
+} from "./pages/Services";
+
+import ProjectDetails from "./pages/ProjectDetails";
+
+function App() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        padding: "40px",
-        backgroundColor: "#f5f7fa",
-        color: "white",
-        fontFamily: "Arial, sans-serif",
-        boxSizing: "border-box",
-      }}
-    >
-      <h1>My Portfolio</h1>
-      <p>Welcome to my portfolio!</p>
-      <p>React is working successfully.</p>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+
+          <Route path="/projects" element={<Projects />} />
+          <Route
+            path="/projects/:id"
+            element={<ProjectDetails />}
+          />
+
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/web" element={<WebService />} />
+          <Route path="/services/ui" element={<UIService />} />
+          <Route
+            path="/services/marketing"
+            element={<MarketingService />}
+          />
+
+          <Route path="/contact" element={<Contact />} />
+
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
+
+export default App;
